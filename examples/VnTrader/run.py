@@ -8,15 +8,15 @@ except NameError:  # Python 3
 
 import sys
 reload(sys)
-sys.setdefaultencoding('utf8')
-import os
-# add dev vnpy path to search modules
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..\..')))
 
 try:
     sys.setdefaultencoding('utf8')
 except AttributeError:
     pass
+
+# add dev vnpy path to search modules
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..\..')))
 
 # 判断操作系统
 import platform
