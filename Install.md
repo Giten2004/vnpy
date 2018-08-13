@@ -12,3 +12,16 @@ https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/
 现在官网上找不到所谓的“Windows Server 2008 R2 64-bit and later, with SSL support x64”了，在他们的网站上找个了一个 
 https://www.mongodb.org/dl/win32/x86_64-2008plus-ssl?_ga=2.96490458.49388358.1533894424-858494864.1533894424
 
+
+
+同步代码
+# Fetch all the branches of that remote into remote-tracking branches,
+# such as upstream/master:
+
+git fetch upstream
+
+# Make sure that you're on your master branch:
+
+git checkout master
+
+git merge upstream/master
