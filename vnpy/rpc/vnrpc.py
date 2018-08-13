@@ -28,6 +28,8 @@ class RpcObject(object):
     json：性能略低但通用性更好，大部分编程语言都内置了相关的库。
     cPickle：性能一般且仅能用于Python，但是可以直接传送Python对象，非常方便。
 
+    bxu:考虑 加入 Protocol Buffers 吗？这个应该是目前序列化性能最好的工具
+
     因此建议尽量使用msgpack，如果要和某些语言通讯没有提供msgpack时再使用json，
     当传送的数据包含很多自定义的Python对象时建议使用cPickle。
 
