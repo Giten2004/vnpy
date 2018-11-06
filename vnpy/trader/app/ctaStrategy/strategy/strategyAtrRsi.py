@@ -3,6 +3,10 @@
 """
 一个ATR-RSI指标结合的交易策略，适合用在股指的1分钟和5分钟线上。
 
+https://jingyan.baidu.com/article/eae07827babda51fec54853c.html
+ATR又称 Average true range平均真实波动范围，简称ATR指标，是由J.Welles Wilder 发明的，
+ATR指标主要是用来衡量市场波动的强烈度，即为了显示市场变化率的指标。
+
 注意事项：
 1. 作者不对交易盈利做任何保证，策略代码仅供参考
 2. 将IF0000_1min.csv用ctaHistoryData.py导入MongoDB后，直接运行本文件即可回测策略
