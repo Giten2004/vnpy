@@ -8,6 +8,9 @@ try:
 except NameError:
     pass         # Python 3
 
+# add dev vnpy path to search modules
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..\..')))
 # 判断操作系统
 import platform
 
