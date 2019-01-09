@@ -1,25 +1,25 @@
-::°²×°Chocolate
+::å®‰è£…Chocolate
 @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
 
-::°²×°Anaconda
+::å®‰è£…Anaconda
 choco install anaconda2 --version 5.2.0 --x86 -y --ignorechecksum --params="'/AddToPath=1'"
 setx PATH "%PATH%;C:\Program Files\Anaconda2\;C:\Program Files\Anaconda2\Scripts\"
 
-::°²×°VC Redist
+::å®‰è£…VC Redist
 choco install vcredist2013 --x86 -y
 
-::°²×°MongoDB
+::å®‰è£…MongoDB
 choco install mongodb -y
 
-::°²×°Git
+::å®‰è£…Git
 choco install git -y
 
-::ÏÂÔØvn.py
+::ä¸‹è½½vn.py
 call refreshenv
 cd c:\
 git clone "https://github.com/vnpy/vnpy.git"
 
-::×¢²áMongoDBÎªÏµÍ³·şÎñ
+::æ³¨å†ŒMongoDBä¸ºç³»ç»ŸæœåŠ¡
 cd vnpy
 git checkout dev
 
@@ -29,5 +29,5 @@ mkdir c:\data\log
 "C:\Program Files\MongoDB\Server\3.6\bin\mongod.exe" --config "C:\vnpy\mongod.cfg" --install
 net start MongoDB
 
-::°²×°vn.py
+::å®‰è£…vn.py
 start /wait install.bat
