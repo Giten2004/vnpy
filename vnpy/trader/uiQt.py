@@ -30,14 +30,17 @@ def createQApp():
     if globalSetting['darkStyle']:
         try:
             import qdarkstyle
-            qApp.setStyleSheet(qdarkstyle.load_stylesheet())
+            if hasattr(qdarkstyle, 'load_stylesheet_from_environment'):
+                qApp.setStyleSheet(qdarkstyle.load_stylesheet_from_environment())
+            else:
+                qApp.setStyleSheet(qdarkstyle.load_stylesheet())
         except ImportError:
             pass
         
     # 设置Windows底部任务栏图标
     if 'Windows' in platform.uname():
         import ctypes
-        ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID('vn.trader')  
+        ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID('vn.trader')
     
     # 设置Qt字体
     qApp.setFont(BASIC_FONT)
