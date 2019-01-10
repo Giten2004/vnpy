@@ -188,13 +188,13 @@ class BacktestingEngine(object):
     #----------------------------------------------------------------------
     def initHdsClient(self):
         """初始化历史数据服务器客户端"""
-        reqAddress = 'tcp://localhost:5555'
-        subAddress = 'tcp://localhost:7777'   
+        # reqAddress = 'tcp://127.0.0.1:5555'
+        # subAddress = 'tcp://127.0.0.1:7777'   
         
-        self.hdsClient = RpcClient(reqAddress, subAddress)
-        self.hdsClient.start()
+        # self.hdsClient = RpcClient(reqAddress, subAddress)
+        # self.hdsClient.start()
 
-        self.output(u'初始化历史数据服务器客户端-完成')
+        # self.output(u'初始化历史数据服务器客户端-完成')
     
     #----------------------------------------------------------------------
     def loadHistoryData(self):
