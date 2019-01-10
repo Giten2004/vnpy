@@ -205,7 +205,9 @@ class RpcClient(RpcObject):
     def __init__(self, reqAddress, subAddress):
         """Constructor"""
         super(RpcClient, self).__init__()
-
+        
+        print(str(datetime.now()) + "\t" + "reqAddress:" + reqAddress)
+        print(str(datetime.now()) + "\t" + "subAddress:" + subAddress)
         # zmq端口相关
         self.__reqAddress = reqAddress
         self.__subAddress = subAddress

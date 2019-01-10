@@ -17,6 +17,7 @@ import pymongo
 import numpy as np
 import matplotlib.pyplot as plt
 
+
 from vnpy.rpc import RpcClient, RpcServer, RemoteException
 
 
@@ -192,6 +193,8 @@ class BacktestingEngine(object):
         
         self.hdsClient = RpcClient(reqAddress, subAddress)
         self.hdsClient.start()
+
+        self.output(u'初始化历史数据服务器客户端-完成')
     
     #----------------------------------------------------------------------
     def loadHistoryData(self):
