@@ -3,9 +3,13 @@
 """
 展示如何执行策略回测。
 """
-
 from __future__ import division
 
+
+# add dev vnpy path to search modules
+import os
+import sys
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..\..')))
 
 from vnpy.trader.app.ctaStrategy.ctaBacktesting import BacktestingEngine, MINUTE_DB_NAME
 
