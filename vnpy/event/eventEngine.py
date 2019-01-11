@@ -1,4 +1,5 @@
-# encoding: UTF-8
+#! /usr/bin/env python
+# -*- coding: utf-8 -*-
 
 # 系统模块
 from __future__ import print_function
@@ -13,6 +14,16 @@ from qtpy.QtCore import QTimer
 # 自己开发的模块
 from .eventType import *
 
+
+########################################################################
+class Event:
+    """事件对象"""
+
+    #----------------------------------------------------------------------
+    def __init__(self, type_=None):
+        """Constructor"""
+        self.type_ = type_      # 事件类型
+        self.dict_ = {}         # 字典用于保存具体的事件数据
 
 ########################################################################
 class EventEngine(object):
@@ -321,19 +332,8 @@ class EventEngine2(object):
             self.__generalHandlers.remove(handler)
 
 
-########################################################################
-class Event:
-    """事件对象"""
-
-    #----------------------------------------------------------------------
-    def __init__(self, type_=None):
-        """Constructor"""
-        self.type_ = type_      # 事件类型
-        self.dict_ = {}         # 字典用于保存具体的事件数据
-
-
 #----------------------------------------------------------------------
-def test():
+def testEventEngine2():
     """测试函数"""
     import sys
     from datetime import datetime
@@ -355,3 +355,4 @@ def test():
 # 直接运行脚本可以进行测试
 if __name__ == '__main__':
     test()
+    testEventEngine2()
