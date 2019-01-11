@@ -1,4 +1,5 @@
-# encoding: UTF-8
+#! /usr/bin/env python
+# -*- coding: utf-8 -*-
 
 '''
 本文件仅用于存放对于事件类型常量的定义。
@@ -13,8 +14,7 @@
 from __future__ import print_function
 
 
-EVENT_TIMER = 'eTimer'                  # 计时器事件，每隔1秒发送一次
- 
+EVENT_TIMER = 'eTimer'                  # 计时器事件，每隔1秒发送一次 
 
 
 #----------------------------------------------------------------------
@@ -22,7 +22,11 @@ def test():
     """检查是否存在内容重复的常量定义"""
     check_dict = {}
     
-    global_dict = globals()    
+    # globals() 函数会以字典类型返回当前位置的全部全局变量。
+    global_dict = globals()
+
+    print(global_dict)
+    print(u'########################################')
     
     for key, value in global_dict.items():
         if '__' not in key:                       # 不检查python内置对象
