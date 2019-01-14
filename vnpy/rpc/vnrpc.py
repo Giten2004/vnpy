@@ -225,6 +225,10 @@ class RpcClient(RpcObject):
     def __getattr__(self, name):
         """实现远程调用功能"""
         # 执行远程调用任务
+        """
+        *args表示任何多个无名参数，它是一个tuple
+        **kwargs表示关键字参数，它是一个dict
+        """
         def dorpc(*args, **kwargs):
             # 生成请求
             req = [name, args, kwargs]
