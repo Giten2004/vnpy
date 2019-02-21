@@ -136,7 +136,7 @@ def downloadDailyBarBySymbol(symbol):
     print(u'合约%s的日K线数据下载完成%s - %s，耗时%s毫秒' %(symbol, df.index[0], df.index[-1], cost))
 
 #----------------------------------------------------------------------
-def downloadTickBySymbol(symbol, date):
+def downloadTickBySymbol(symbol, startDate, endDate):
     """下载某一合约日线数据"""
     start = time()
 
@@ -145,8 +145,8 @@ def downloadTickBySymbol(symbol, date):
     
     df = rq.get_price(symbol, 
                       frequency='tick', 
-                      start_date=date, 
-                      end_date=date)
+                      start_date=startDate, 
+                      end_date=endDate)
     
     for ix, row in df.iterrows():
         tick = generateVtTick(row, symbol)

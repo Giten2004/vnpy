@@ -1,5 +1,6 @@
 {
-	"rqUsername": "",
-	"rqPassword": "",
-	"product": ["IF"]
+	"rqUsername": "license",
+	"rqPassword": "GR-3Vr2QHSN9waUtBfPq-BS-X2mgqu2KYG1yRs0LxUe3_zI7TZBHgrJF8FM7WAaIaA80w33VwsaPyDDQm34Uz8Ml7W5JkNZ54n-dclCNDP8Hlo0Gi8VLhxPvDhIuq3pf40ska8xPYBbyL0RLNKyFLGvvUjrx-vtLDNwqfL44v4c=UeV9Wg0XJMxLEWAUHG3Qth808FKfx2VIUIlhF152QUHtWN3PReA3QyPqdSPJSVQRIk6jcVZLiAGsfj4a2X1Ne3QH1J4ymL2VZQv0FFzDVdTyATpaqpiYOQLwRp4YD_dkL2tmTQjRlngKJKMyZDgzS0tufP1_qzvUqbQW8ZgZRfM=",
+	"product": ["IF"],
+	"symbols": ["I99", "IF99", "RB99", "TA99", "I88", "IF88", "RB88", "TA88"]
 }
